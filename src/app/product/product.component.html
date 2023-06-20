@@ -1,0 +1,22 @@
+
+  <div class="container-fluid">
+    <div class="row">
+      <ng-container *ngFor="let product of userData">
+        <div class="col-md-3 p-3">
+          <div class="card" style="width: 18rem; ">
+            <img class="card-img-top" src={{product.image}} alt="Card image cap">
+            <div class="card-body">
+              <!-- <h5>{{product.id}}</h5> -->
+              <h5 class="card-title text-truncate">{{product.title}}</h5>
+              <p class="card-text text-truncate">{{product.description}}</p>
+              <h5 class="card-text text-truncate">price-{{product.price}}</h5>
+              <button class="btn btn-primary"(click)="submit(product);">AddToCart</button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+
+

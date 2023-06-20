@@ -1,0 +1,46 @@
+<ng-container *ngIf="this.cartView.length!=0">
+  <div class="container-fluid">
+    <div class="row">
+      <ng-container *ngFor="let cart of cartView">
+        <div class="col-md-3 p-3">
+          <div class="card" style="width: 18rem; ">
+            <img class="card-img-top" src={{cart.image}} alt="Card image cap">
+            <div class="card-body">
+              <!-- <h5>{{cart.id}}</h5> -->
+              <h5 class="card-title text-truncate">{{cart.title}}</h5>
+              <p class="card-text text-truncate">{{cart.description}}</p>
+              
+              <button class="btn btn-primary"(click)="delete(cart)">deleteProduct</button>
+              <button class="btn btn-success ms-2"(click)="buy(cart)">Buy it now</button>
+              <!-- <select>
+                <option value="1">qty-{{cart.total}}</option>
+              </select> -->
+              <div class="content">
+                <button type="button" class="btn-icon bg-success"(click)="plus(cart)"><i class="fa-solid fa-plus"></i></button>
+                <span>{{cart.item}}</span>
+                <button type="button" class="btn-icon bg-danger" (click)="minus(cart)"><i class="fa-solid fa-minus"></i></button>
+              </div>
+              <p>total Price-{{cart.tempPrice}}</p>
+            </div>
+          </div>
+        </div>
+       
+      </ng-container>
+      <h3 >all Product cost is-{{sum}}</h3>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="cartView.length ==0">
+  <div class="container">
+      <div class="text mt-2">
+          <h5 class="text-center">My Cart</h5>
+      </div>
+      <div class="text-center">
+          <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+          <h4>Your cart is empty!</h4>
+          <h6>Add item to it now</h6>
+          <button routerLink="/product" class="btn btn-primary">Shop Now</button>
+      </div>
+  </div>
+</ng-container>
+ 

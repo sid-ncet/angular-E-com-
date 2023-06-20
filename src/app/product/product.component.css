@@ -1,0 +1,25 @@
+table,tr,th,td{
+    border: 1px solid black;
+}
+img{
+    width:220px;
+    margin:30px;
+}
+.rating{
+    padding:5px;
+    width:150px;
+}
+.nav-item{
+    margin:4px;
+}
+.nav-item a{
+    color:white;
+    text-decoration: none;
+}
+.navbar{
+    background-color: rgb(0, 140, 255);
+}
+.card img{
+    width:auto;
+    height: 250px;
+}
